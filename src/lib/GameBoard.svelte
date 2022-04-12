@@ -1,18 +1,18 @@
 
 <div class="columns">
-    <div class="column is-half">
+    <div class="column is-three-quarters">
         <table class="table is-bordered is-fullwidth">
-            <tr>
+            <tr class="has-text-centered">
                 <td></td>
                 <td></td>
                 <td></td>
             </tr>
-            <tr>
+            <tr class="has-text-centered">
                 <td></td>
                 <td></td>
                 <td></td>
             </tr>
-            <tr>
+            <tr class="has-text-centered">
                 <td></td>
                 <td></td>
                 <td></td>
@@ -23,7 +23,9 @@
 
 <style>
     td {
-        width: 50px;
-        height: 150px;
+        width: 3em;
+        height: 3em;
+        font-size: 5rem;
     }
+
 </style>
