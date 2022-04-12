@@ -1,3 +1,8 @@
-<h3 class="title is-3">Number of players: </h3>
+<script>
 
-<h4 class="title is-4">Player X</h4>
+
+</script>
+
+<h3 class="title">Number of people playing:</h3>
+
+<h3 class="title">Player: X</h3>
