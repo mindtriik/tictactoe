@@ -1,7 +1,11 @@
 <script>
   import GameState from "./lib/GameState.svelte";
-  import GameSqare from "./lib/GameSquare.svelte";
-import GameSquare from "./lib/GameSquare.svelte";
+  import GameSquare from "./lib/GameSquare.svelte";
+  import gameStore from "./game-store.js"
+
+  gameStore.subscribe(data => {
+    console.log(data, 'data from store');
+  })
 
 </script>
 
@@ -29,7 +33,9 @@ import GameSquare from "./lib/GameSquare.svelte";
           <GameSquare space="X" />
         </div>
     
-        <div class="section"><button class="button is-fullwidth">New Game</button></div>
+        <div class="section">
+          <button class="button is-info is-fullwidth">New Game</button>
+        </div>
       </div>
     </div>
   </div>
