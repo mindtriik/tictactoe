@@ -15,10 +15,7 @@ export const nextMove = async (space) => {
 
 export const reset = async () => {
     try {
-        const response = await fetch(`${import.meta.env.VITE_apiURL}/reset`);
-        const message = await response.json();
-
-        return message.errorMessage;
+        await fetch(`${import.meta.env.VITE_apiURL}/reset`);
     } catch (error) {
         console.log(error);
         return 'Error reseting game'
