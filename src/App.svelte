@@ -20,6 +20,8 @@
     return result;
   };
 
+  async function newGame() { errorMessage = await reset(); } 
+
   gameStore.subscribe((state) => {
     if (!state) {
       return;
@@ -62,7 +64,11 @@
             {#each rows as tile, i}
               {@const offset = r === 0 ? r : r === 1 ? 3 : 6}
               {@const pos = i + offset}
-              <GameSquare {winner} space={board[pos]} on:click={() => takeSpace(pos)} />
+              <GameSquare
+                {winner}
+                space={board[pos]}
+                on:click={() => takeSpace(pos)}
+              />
             {/each}
           </div>
         {/each}
@@ -73,9 +79,9 @@
   <div class="columns">
     <div class="column is-three-quarters">
       {#if winner}
-        <button class="button is-info is-fullwidth" on:click={reset}
-          >New Game</button
-        >
+        <button class="button is-info is-fullwidth" on:click={reset}>
+          New Game
+        </button>
       {/if}
       {#if errorMessage}
         <p class="content is-medium has-text-danger">{errorMessage}</p>
