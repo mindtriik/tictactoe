@@ -1,5 +1,8 @@
 <script>
     export let space = '';
+    export let winner; 
+
+    $: won = space === winner
 </script>
 
 <div class="
@@ -9,7 +12,9 @@ is-justify-content-center
 has-text-centered
 is-flex-grow-1
 py-5
-">
+"
+class:winning={won}
+on:click>
 {space}
 </div>
 
@@ -21,4 +26,10 @@ py-5
         font-size: 55px;
 
     }
+
+    .winning {
+        color: purple
+    }
+
+
 </style>
